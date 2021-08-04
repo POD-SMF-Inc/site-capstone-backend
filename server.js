@@ -30,6 +30,9 @@ app.use("/survey", surveyRouter)
 app.use('/chatbot', chatbotRouter)
 app.use('/list', listRouter)
 app.use("/favorites", favRouter)
+app.use("/", (req,res,next) => {
+  res.send({"ping":"pong"})
+})
 
 
 
